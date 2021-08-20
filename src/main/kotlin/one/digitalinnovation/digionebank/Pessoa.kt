@@ -1,8 +1,10 @@
 package one.digitalinnovation.digionebank
 
-class Pessoa {
-    var nome: String = "Bruno"
-    var cpf: String = "120.120.120-12"
+class Pessoa(nome: String, cpf: String){
+    var nome: String = nome
+    private set
+    var cpf: String = cpf
+    private set
 
     inner class Endereco{
         var rua: String = "Rua teste"
@@ -10,7 +12,7 @@ class Pessoa {
 }
 
 fun main(){
-    val p1 = Pessoa()
+    val p1 = Pessoa("Bruno", "120.120.120-12")
 
     println(p1.nome)
     println(p1.cpf)
