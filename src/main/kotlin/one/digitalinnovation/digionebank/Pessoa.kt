@@ -6,10 +6,6 @@ class Pessoa(nome: String, cpf: String){
     var cpf: String = cpf
     private set
 
-    inner class Endereco{
-        var rua: String = "Rua teste"
-    }
-
     fun pessoaInfo() = "Nome: $nome CPF: $cpf"
 }
 
@@ -18,5 +14,4 @@ fun main(){
 
     println(p1.pessoaInfo())
 
-    println(p1.Endereco().rua)
 }
